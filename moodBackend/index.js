@@ -28,7 +28,7 @@ app.use('/api/moods', moodRoutes);
 app.use(errorHandler);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://mood-tracker-eta-two.vercel.app/')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://usmanalfaki:VDrc0N3aHzf6PEqW@mood-tracker.gpxr1.mongodb.net/?retryWrites=true&w=majority&appName=mood-tracker')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
