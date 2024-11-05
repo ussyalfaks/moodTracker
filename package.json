@@ -1,0 +1,13 @@
+{
+  "name": "moodTracker",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "scripts": {
+    "dev:mood": "cd mood && npm run dev",       
+    "dev:backend": "cd moodBackend && npm start",
+    "dev": "concurrently -d \"npm run dev:mood\" \"npm run dev:backend\""
+  }
+}
