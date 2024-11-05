@@ -28,10 +28,12 @@ app.use('/api/moods', moodRoutes);
 app.use(errorHandler);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://usmanalfaki:VDrc0N3aHzf6PEqW@mood-tracker.gpxr1.mongodb.net/?retryWrites=true&w=majority&appName=mood-tracker')
+console.log("Attempting to connect to MongoDB...");
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
