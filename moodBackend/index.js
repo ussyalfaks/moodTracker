@@ -11,7 +11,9 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.get('/', ( res) => {
+  res.send('App is running');
+});
 // Middleware
 app.use(cors({
   origin: 'https://mood-tracker-eta-two.vercel.app',
