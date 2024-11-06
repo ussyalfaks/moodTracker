@@ -23,7 +23,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     let mounted = true;
   
-    const fetchProfile = async () => {
+    const getProfile = async () => {
       try {
         setLoading(true);
         const data = await api.getProfile();
@@ -42,7 +42,7 @@ export function AuthProvider({ children }) {
       }
     };
   
-    fetchProfile();
+    getProfile();
   
     return () => {
       mounted = false;
