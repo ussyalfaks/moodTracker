@@ -10,13 +10,15 @@ import { errorHandler } from './middleware/errorHandler.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 10000;
+
+
 app.get('/', ( res) => {
   res.send('App is running');
 });
 // Middleware
 app.use(cors({
-  origin: 'https://mood-tracker-eta-two.vercel.app',
+  origin: 'https://mood-tracker-eta-two.vercel.app' , 
   credentials: true
 }));
 app.use(express.json());
@@ -36,6 +38,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://usmanalfaki:VDrc0N3aH
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
