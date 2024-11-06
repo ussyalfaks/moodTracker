@@ -4,11 +4,15 @@ const moodEntrySchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: 'User'
+    ref: 'User',
+    index: true // Indexing for faster lookups by userId
   },
   mood: {
     type: String,
-    enum: ['amazing', 'good', 'okay', 'bad', 'terrible'],
+    enum: {
+      values: ['amazing', 'good', 'okay', 'bad', 'terrible'],
+      message: '{VALUE} is not a valid mood' // Custom validation message
+    },
     required: true
   },
   description: {
@@ -20,7 +24,7 @@ const moodEntrySchema = new mongoose.Schema({
     default: Date.now
   }
 }, {
-  timestamps: true
+  timestamps: true // Automatically adds createdAt and updatedAt fields
 });
 
 export default mongoose.model('MoodEntry', moodEntrySchema);
