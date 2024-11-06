@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Hash the password before saving if it’s new or changed
+// Hash the password before saving if it's new or changed
 userSchema.pre('save', async function (next) {
   if (this.isModified('password')) {
     this.password = await bcrypt.hash(this.password, 8);
@@ -31,14 +31,14 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// Method to compare input password with hashed password
-userSchema.methods.isPasswordMatch = async function (inputPassword) {
+// Changed method name to comparePassword to match what's being called
+userSchema.methods.comparePassword = async function (inputPassword) {
   return bcrypt.compare(inputPassword, this.password);
 };
 
 // Handle duplicate email error for better user feedback
 userSchema.post('save', function (error, doc, next) {
-  if (error.name === 'MongoError' && error.code === 11000) {
+  if (error.name === 'MongoServerError' && error.code === 11000) {
     next(new Error('Email is already registered. Please use another email.'));
   } else {
     next(error);
