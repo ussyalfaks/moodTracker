@@ -17,6 +17,7 @@ export function Profile() {
       setLoading(false);
     }
   };
+ 
 
   return (
     <div className="max-w-2xl mx-auto">

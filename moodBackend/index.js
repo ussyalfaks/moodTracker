@@ -18,9 +18,19 @@ app.get('/', (req, res) => {
   res.send('App is running');
 });
 // Middleware
+// app.use(cors({
+//   origin: 'https://mood-tracker-eta-two.vercel.app' , 
+//   credentials: true
+// }));
+
 app.use(cors({
-  origin: 'https://mood-tracker-eta-two.vercel.app' , 
-  credentials: true
+  origin: [
+    'https://mood-tracker-3m3icapmr-ussyalfaks-projects.vercel.app',
+    'https://mood-tracker-eta-two.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(cookieParser());

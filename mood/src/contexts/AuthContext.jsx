@@ -12,13 +12,45 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   api.getProfile()
+  //     .then(data => setUser(data.user))
+  //     .catch(() => setUser(null))
+  //     .finally(() => setLoading(false));
+  // }, []);
+
+
   useEffect(() => {
-    api.getProfile()
-      .then(data => setUser(data.user))
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
+    let mounted = true;
+  
+    const fetchProfile = async () => {
+      try {
+        setLoading(true);
+        const data = await api.getProfile();
+        if (mounted) {
+          setUser(data.user);
+        }
+      } catch (error) {
+        console.error('Failed to fetch profile:', error);
+        if (mounted) {
+          setUser(null);
+        }
+      } finally {
+        if (mounted) {
+          setLoading(false);
+        }
+      }
+    };
+  
+    fetchProfile();
+  
+    return () => {
+      mounted = false;
+    };
   }, []);
 
+
+  
   const login = async (email, password) => {
     const data = await api.login({ email, password });
     setUser(data.user);
