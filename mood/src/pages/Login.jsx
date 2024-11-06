@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { DollarSign, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
 export function Login() {
   const { login } = useAuth();
@@ -39,7 +39,6 @@ export function Login() {
                 <p className="text-red-700 text-sm">{error}</p>
               </div>
             )}
-
             <div className="space-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -74,7 +73,7 @@ export function Login() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-11 text-gray-500"
                 >
-                  {showPassword ? <DollarSign/> : <EyeOff/>}
+                  {showPassword ? <Eye/> : <EyeOff/>}
                 </button>
               </div>
 

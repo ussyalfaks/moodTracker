@@ -1,6 +1,8 @@
 import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { Eye, EyeOff } from 'lucide-react';
+
 
 export function Register() {
   const { register } = useAuth();
@@ -89,7 +91,7 @@ export function Register() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-11 text-gray-500"
                 >
-                  {showPassword ? "Hide" : "Show"}
+                  {showPassword ? <Eye/> : <EyeOff/>}
                 </button>
               </div>
 
