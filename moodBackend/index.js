@@ -26,7 +26,10 @@ app.get('/', (req, res) => {
 app.use(cors({
   origin: [
     'https://mood-tracker-3m3icapmr-ussyalfaks-projects.vercel.app',
-    'https://mood-tracker-eta-two.vercel.app'
+    'https://mood-tracker-eta-two.vercel.app',
+    'https://mood-tracker-git-main-ussyalfaks-projects.vercel.app',
+    'https://mood-tracker-11zeigmtq-ussyalfaks-projects.vercel.app'
+
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
