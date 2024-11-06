@@ -5,10 +5,10 @@ import { auth } from '../middleware/auth.js';
 const router = express.Router();
 
 // Registration route
-router.post('../../mood/src/pages/Register.jsx', register); 
+router.post('/register', register); 
 
 // Login route
-router.post('../../mood/src/pages/Register.jsx', login);
+router.post('/login', login);
 
 // Logout route - ensures token is cleared
 router.post('/logout', logout);
