@@ -1,4 +1,4 @@
-const API_URL = 'https://moodtracker-2q4o.onrender.com/Api';
+const API_URL = 'https://moodtracker-2q4o.onrender.com/api';
 
 export async function register(data) {
   const res = await fetch(`${API_URL}/auth/register`, {
