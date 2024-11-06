@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 
-app.get('/', ( res) => {
+app.get('/', (req, res) => {
   res.send('App is running');
 });
 // Middleware
