@@ -1,4 +1,4 @@
-import  { createContext, useState, useEffect } from 'react';
+import  { createContext,useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as api from '../lib/api';
 import PropTypes from 'prop-types';
@@ -76,13 +76,13 @@ export function AuthProvider({ children }) {
   );
 }
 
-// export function useAuth() {
-//   const context = useContext(AuthContext);
-//   if (!context) {
-//     throw new Error('useAuth must be used within an AuthProvider');
-//   }
-//   return context;
-// }
+ export function useAuth() {
+   const context = useContext(AuthContext);
+   if (!context) {
+     throw new Error('useAuth must be used within an AuthProvider');
+   }
+   return context;
+ }
 
 AuthProvider.propTypes = {
     children: PropTypes.node.isRequired,
