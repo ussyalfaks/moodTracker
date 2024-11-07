@@ -22,8 +22,9 @@ export async function register(data) {
     const response = await fetch(`${API_URL}/auth/register`, {
       method: 'POST',
       headers: getHeaders(),
-      credentials: 'include',
       body: JSON.stringify(data),
+      credentials: 'include',
+
     });
     return handleResponse(response);
   } catch (error) {
@@ -37,8 +38,9 @@ export async function login(data) {
     const response = await fetch(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: getHeaders(),
-      credentials: 'include',
       body: JSON.stringify(data),
+      credentials: 'include',
+
     });
     return handleResponse(response);
   } catch (error) {
