@@ -1,4 +1,4 @@
-const API_URL = 'https://moodtracker-2q4o.onrender.com';
+const API_URL = 'https://moodtracker-2q4o.onrender.com/api';
 
 // Helper function to handle API responses
 const handleResponse = async (response) => {
