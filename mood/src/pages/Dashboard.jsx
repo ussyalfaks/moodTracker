@@ -3,6 +3,7 @@ import Logo from '../assets/Logo.png'
 import Emotional from '../assets/emotional.png'
 import { EarthLock, Award } from 'lucide-react'
 import Mockup from '../assets/Mockup.png'
+import ChartImg from '../assets/chart.png'
 import Footer from '../Components/Footer'
 
 export function Dashboard ()  {
@@ -24,8 +25,8 @@ export function Dashboard ()  {
     </div> */}
 
     <div>
-      <Link to="/register">
-        <button className='bg-[#fff5DC] text-[#629878] mx-5 py-2 px-5 rounded-3xl font-semibold'>Register</button>
+      <Link to="/login">
+        <button className='bg-[#fff5DC] text-[#629878] mx-5 py-2 px-5 rounded-3xl font-semibold'>Login</button>
       </Link>
     </div>
     </div>
@@ -70,7 +71,7 @@ export function Dashboard ()  {
       </div>
     </div>
 
-    <div className='flex justify-center items-center mx-7 py-10 px-5'>
+    <div className='flex justify-center items-center mx-7 my-16 py-10 px-5'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-8 '>
       <div className='flex justify-center items-center flex-col border-2 border-[#629878] p-4 rounded-2xl'>
         <EarthLock size={50} className='text-[#629878]'/>
@@ -97,6 +98,20 @@ export function Dashboard ()  {
       </div>
       
     </div>
+    <div className="flex flex-col md:flex-row items-center justify-between gap-10 mx-auto max-w-6xl p-12">
+  <div className="flex-1 md:max-w-md">
+    <p className="font-semibold text-gray-700 font-serif text-2xl text-center md:text-left md:text-3xl lg:text-4xl">
+      Stay connected with daily reminders & receive insightful reports
+    </p>
+  </div>
+  <div className="flex-1">
+    <img
+      src={ChartImg}
+      alt="Insightful data visualization"
+      className="w-full max-w-sm mx-auto md:max-w-none rounded-md shadow-2xl border border-[#629878]"
+    />
+  </div>
+</div>
 
     <div className="flex flex-col md:flex-row items-center gap-16 p-12 max-w-6xl mx-auto">
       <div className="">
@@ -110,7 +125,7 @@ export function Dashboard ()  {
       <div className="flex flex-col items-start space-y-8 max-w-xl">
         <div className="space-y-3">
           <p className="font-semibold bg-yellow-100 w-fit border border-[#629878] p-2 rounded-xl uppercase tracking-wide">About us</p>
-          <h2 className="text-3xl font-bold text-gray-900">Why You Should Join Us</h2>
+          <h2 className="text-4xl font-bold text-gray-900">Why You Should Join Us</h2>
         </div>
 
         <div className="space-y-6">
@@ -131,7 +146,7 @@ export function Dashboard ()  {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Guided You Everyday</h3>
+              <h3 className="text-2xl font-semibold text-gray-900">Guided You Everyday</h3>
             </div>
             <p className="text-gray-600 leading-relaxed pl-10">
               Mood tracker protects all trade data with end-to-end encryption for complete security and privacy.
@@ -155,7 +170,7 @@ export function Dashboard ()  {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Visualize Your Results</h3>
+              <h3 className="text-2xl font-semibold text-gray-900">Visualize Your Results</h3>
             </div>
             <p className="text-gray-600 leading-relaxed pl-10">
               Find an easier way to get real-time updates with our intuitive visualization tools.
