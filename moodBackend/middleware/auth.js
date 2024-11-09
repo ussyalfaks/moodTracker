@@ -3,8 +3,8 @@ import User from '../models/Users.js';
 
 export const auth = async (req, res, next) => {
   try {
-    // Check if the token exists in cookies
-    const token = req.cookies.token;
+    // Check if the token exists in cookies or in the Authorization header
+    const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
     if (!token) {
       return res.status(401).json({ error: 'Authentication token is missing' });
     }
@@ -32,3 +32,4 @@ export const auth = async (req, res, next) => {
     }
   }
 };
+
