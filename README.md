@@ -40,7 +40,7 @@ Users should be able to:
 ### Built with
 
 - React.js
-- Redux
+- React Context API
 - Tailwind CSS
 - Node.js
 - Express
@@ -56,7 +56,7 @@ Here’s a summary of what I learned while building the Mood Tracker app:
 I successfully implemented authentication features such as registration, login, and profile management using JWT (JSON Web Tokens) for secure communication between the client and the server.
 
 #### Mood Tracking:
-I used Redux for state management, handling the user's mood entries and ensuring smooth updates between the frontend and backend.
+I used React Context API for state management, handling the user's mood entries and ensuring smooth updates between the frontend and backend.
 
 #### Responsive Design:
 By utilizing Tailwind CSS, I created a responsive layout that adjusts to different screen sizes, ensuring that the app looks great on both desktop and mobile devices.
@@ -67,5 +67,21 @@ I integrated **Chart.js** to display mood trends over time, allowing users to vi
 #### Security:
 I implemented **secure authentication** with password hashing and token-based authentication to protect user data.
 
-```html
-<h1>Welcome to the Mood Tracker App</h1>
+### Continued development
+
+#### Accessibility (a11y):
+Focus on improving accessibility by using semantic HTML elements and ARIA attributes to make the Mood Tracker app more inclusive. I plan to ensure keyboard navigation and screen reader compatibility.
+
+#### Mood Data Analysis:
+In the future, I want to implement more advanced data analysis features, such as tracking correlations between mood and external factors (e.g., weather, exercise, etc.). and changing the state management to Redux From React Context API
+
+#### Enhanced Mobile Experience:
+While the app is already responsive, I plan to further enhance the mobile experience by optimizing layouts and testing across a wider range of devices.
+
+#### User Notifications:
+I'll add user notifications for events like mood logging success, reminders to log moods, and insights about their mood trends.
+
+## Author
+
+- GitHub - [@ussyalfaks](https://github.com/ussyalfaks)
+- Twitter - [@usman_alfaki](https://www.twitter.com/@usman_alfaki)
