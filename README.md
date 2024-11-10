@@ -26,11 +26,15 @@ Users should be able to:
 
 ### Screenshot
 
-#### Desktop View
-![Desktop View](https://github.com/your-username/assets/desktop-view.png)
+![screencapture-mood-tracker-eta-two-vercel-app-Dashboard-2024-11-10-08_08_17](https://github.com/user-attachments/assets/8715d9d4-ca61-48fa-b0f6-14ff0fc07faa)
 
-#### Mobile View
-![Mobile View](https://github.com/your-username/assets/mobile-view.png)
+![screencapture-mood-tracker-eta-two-vercel-app-login-2024-11-10-08_21_40](https://github.com/user-attachments/assets/cefc1754-68df-4b4b-a7e4-43e389526215)
+![screencapture-mood-tracker-eta-two-vercel-app-register-2024-11-10-08_21_54](https://github.com/user-attachments/assets/2bf3b0a8-fedb-46eb-acb9-49ab274e2099)
+
+![screencapture-mood-tracker-eta-two-vercel-app-profile-2024-11-10-08_09_36](https://github.com/user-attachments/assets/b01a0c93-6b8c-4f87-8c21-72053f2b937e)
+![screencapture-mood-tracker-eta-two-vercel-app-2024-11-10-08_08_55](https://github.com/user-attachments/assets/f1cae130-51e2-4f1b-8859-52790e2d1ffd)
+![screencapture-mood-tracker-eta-two-vercel-app-stats-2024-11-10-08_09_10](https://github.com/user-attachments/assets/12b7106d-76aa-494f-bf92-e9b167fc72f2)
+
 
 ### Links
 
