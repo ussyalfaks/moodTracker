@@ -1,4 +1,4 @@
-# Mood Tracker Solution
+# Mood Tracker 
 
 This is a solution to the Mood Tracker project, which helps users log and track their daily moods. This project provides an intuitive and simple interface where users can log their mood and view trends over time.
 
