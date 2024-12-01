@@ -20,7 +20,7 @@ function PrivateRoute({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDelayComplete(true);
-    }, 1000);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
