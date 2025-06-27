@@ -4,6 +4,8 @@ This is a solution to the Mood Tracker project, which helps users log and track 
 
 ## Table of Contents
 
+
+
 - [Overview](#overview)
   - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
